@@ -47,10 +47,10 @@
   % \vspace{0.2em}                                                    % Creates vertical space in between
   \begin{center}                                                % Creates a table to place things in
     \makebox[\textwidth] {
-      \large \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{LinkedIn} ~$|$~
-      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/phone_small.png}} \@resumephone ~$|$~ 
-      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/gmail_small.png}} \href{mailto:\@resumeemail}{\@resumeemail} ~$|$~ 
-      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/github_small.png}} \href{\@resumegithub}{GitHub} ~$|$~
+      \large \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{LinkedIn} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/phone_small.png}} \@resumephone ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/gmail_small.png}} \href{mailto:\@resumeemail}{\@resumeemail} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/github_small.png}} \href{\@resumegithub}{GitHub} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \@resumelocation
     }
   \end{center}
