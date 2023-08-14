@@ -16,7 +16,9 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{calc}             % Provides support for performing arithmetic calculations within the document
 \usepackage{tikz}             % Useful for drawing various things
-% \usepackage{geometry}
+\usepackage{xstring}
+\usepackage{tabularx}
+\usepackage{ulem}
 
 % Define class options for customization
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}       % Declares a class option of any unspecified option passing it to article class
@@ -75,20 +77,28 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Environnments - Makes it so that format doesn't strictly follow the article class
 
+% Extract the first and remaining characters
+\def\firstletter#1#2@{#1}
+\def\remainingletters#1#2@{#2}
+
 % Creates a new definition of repeating horizantal hrule but extends to hfill in thicker fashion
 \renewcommand{\hrulefill}{\leavevmode\leaders\hrule height 1.4pt\hfill\kern 0pt}
 
 % New environment meant to detach from the original page format to create a section of itself
 \newenvironment{resSection}[1] {
 
+  % Definitions
+  \def\first{\firstletter#1@}
+  \def\rest{\remainingletters#1@}
+
   % Creates the section title
   \sectionskip
-  \MakeUppercase{\begin{flushleft} \Large\bf #1 \hrulefill \end{flushleft}}
+  \MakeUppercase{\begin{flushleft} \Large \scalebox{1.4}[1.4]{\first} \!\!\!\! \scalebox{1}[1]{\rest} \hrulefill \end{flushleft}}
 
-  % Handles the section lines here
+  % Handles the section lines here (can change value added to change the section title divisor length)
   \vspace{1.1ex}
   \newdimen\swidth
-  \setbox0=\hbox{\MakeUppercase{\Large\bf #1}}
+  \setbox0=\hbox{\MakeUppercase{\Large \scalebox{1.4}[1.4]{\first} \!\!\!\! \scalebox{1}[1]{\rest} + 10pt}}
   \swidth=\wd0
   \hrule height 1.4pt width \swidth
 
@@ -107,11 +117,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Education Section - Commands and possible macros used in printing the education info
 
-% Creates a new entry with formatted education
+% Creates a new entry with formatted education arguments
 \newcommand{\addEducation}[5]{
-  {#1}\\{#2}\\{#3}\\{#4}\\{#5}
+  \begin{flushleft}
+
+    % Table format for degree, school name, location, and dates
+    \begin{tabularx}{\textwidth}{p{7cm} X c r}
+      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & {#3} & \textbf{#4}\\
+    \end{tabularx} \\
+
+    % Further description including focus, minor, and relevant coursework
+    {#5}
+  \end{flushleft}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\endinput                           % End of the class file
+\endinput                       % End of the class file
 
