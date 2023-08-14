@@ -1,5 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Title: Resume Template for Kevin Lizarazu
+%% File: res.tx
+%% Author: Kevin Lizarazu-Ampuero
+%% Description: LaTeX document for resume templating
 %% Date: 08/09/2023
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Packages Here
@@ -22,9 +24,13 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Document Here
+%% Document Setup
 \documentclass{resume}
+\thispagestyle{empty}
+\usepackage[left=0.4in,top=0.6in,right=0.4in,bottom=0.6in]{geometry} 
 
+
+% Setters
 \setName{Kevin Lizarazu-Ampuero}
 \setEmail{lizarazukevin@vt.edu}
 \setPhone{(703)447-7627}
@@ -32,11 +38,20 @@
 \setGitHub{https://github.com/lizarazukevin}
 \setLocation{Arlington, VA}
 
+% Begin Document Content
 \begin{document}
-\title{How to Structure a LaTeX Document}
-\author{Andrew Roberts}
-\date{December 2004}
-\maketitle
-% Your resume content here
 
+\maketitle                              % Make Title
+
+\begin{resSection}{Education}
+    \addEducation{Degree}{SchoolName}{Location}{Dates}{Description}
+\end{resSection}
+\begin{resSection}{Skills}
+    Anotha one
+\end{resSection}
+
+                                        % Make Experience 
+                                        % Make Organizations
+                                        % Make Skills
+                                    
 \end{document}
