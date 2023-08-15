@@ -16,9 +16,8 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{calc}             % Provides support for performing arithmetic calculations within the document
 \usepackage{tikz}             % Useful for drawing various things
-\usepackage{xstring}
-\usepackage{tabularx}
-\usepackage{ulem}
+\usepackage{tabularx}         % Can change the width of table sections
+\usepackage{ulem}             % Used for underlining text
 
 % Define class options for customization
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}       % Declares a class option of any unspecified option passing it to article class
@@ -122,8 +121,8 @@
   \begin{flushleft}
 
     % Table format for degree, school name, location, and dates
-    \begin{tabularx}{\textwidth}{p{7cm} X c r}
-      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & {#3} & \textbf{#4}\\
+    \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
+      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
     \end{tabularx} \\
 
     % Further description including focus, minor, and relevant coursework
@@ -144,7 +143,7 @@
 %% Skills Section - Formatting manner in which skills are shown
 
 % Use this for various technical skills you want to itemize and add
-\newcommand{\addSkill}[1] {
+\newcommand{\addDesc}[1] {
   \begin{flushleft}
     \vspace{-1ex}
     \begin{itemize}
@@ -165,7 +164,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Experience Section - Relevant work experience inside and outside of school
 
+% Takes from the education section in title-like fashion
+\newcommand{\addExperience}[4]{
+  \begin{flushleft}
+    % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
+    \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
+      {\scalebox{0.8}[0.9]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
+    \end{tabularx} \\
+  \end{flushleft}
+}
 
+% To add descriptions we will reuse the addDesc command in the skills section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput                       % End of the class file
