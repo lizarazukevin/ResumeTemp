@@ -141,5 +141,32 @@
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Skills Section - Formatting manner in which skills are shown
+
+% Use this for various technical skills you want to itemize and add
+\newcommand{\addSkill}[1] {
+  \begin{flushleft}
+    \vspace{-1ex}
+    \begin{itemize}
+      \item {#1}
+    \end{itemize}
+  \end{flushleft}
+}
+
+% Alternative way of displaying skills where you want to showcase top 5
+\newcommand{\addSoftSkill}[5] {
+  \begin{flushleft}
+    \begin{tabularx}{\textwidth}{X X X X X}
+      \centering{\it #1} & \centering{\it #2} & \centering{\it #3} & \centering{\it #4} & \centering{\it #5}
+    \end{tabularx}
+  \end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Experience Section - Relevant work experience inside and outside of school
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput                       % End of the class file
 
