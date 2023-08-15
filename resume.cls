@@ -177,5 +177,17 @@
 % To add descriptions we will reuse the addDesc command in the skills section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Projects Section -
+
+\newcommand{\addProject}[3]{
+  \begin{flushleft}
+    % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
+    \begin{tabularx}{\textwidth}{p{7cm} X r}
+      {\scalebox{1}[1]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
+    \end{tabularx} \\
+  \end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput                       % End of the class file
 
