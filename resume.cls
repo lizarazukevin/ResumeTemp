@@ -169,7 +169,7 @@
   \begin{flushleft}
     % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
     \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
-      {\scalebox{0.8}[0.9]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
     \end{tabularx} \\
   \end{flushleft}
 }
@@ -177,16 +177,43 @@
 % To add descriptions we will reuse the addDesc command in the skills section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Projects Section -
+%% Projects Section - Aimed to share personal and school projects not already mentioned
 
+% Formats the title and main information before adding descriptors
 \newcommand{\addProject}[3]{
   \begin{flushleft}
     % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
     \begin{tabularx}{\textwidth}{p{7cm} X r}
-      {\scalebox{1}[1]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
     \end{tabularx} \\
   \end{flushleft}
 }
+
+% To add descriptions we will reuse the addDesc command in the skills section
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Organizations Section - All the groups we are a part of and extra description if needed
+
+% Adding a single organization to clarify contributions and leadership
+\newcommand{\addOrg}[3]{
+  \begin{flushleft}
+    \vspace{-1ex}
+    \begin{tabularx}{\textwidth}{p{7cm} X r}
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
+    \end{tabularx} \\
+  \end{flushleft}
+}
+
+% Only displays names of listed organizations/honors
+\newcommand{\addOrgs}[1]{
+  \begin{flushleft}
+    \vspace{-1ex}
+    \hspace{0.5ex}
+    \scalebox{0.8}[0.8]{\large\textbf{Additionally:} {#1}}
+  \end{flushleft}
+}
+
+% To add descriptions we will reuse the addDesc command in the skills section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \endinput                       % End of the class file
