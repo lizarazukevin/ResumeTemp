@@ -118,7 +118,7 @@
 %% Education Section - Commands and possible macros used in printing the education info
 
 % Creates a new entry with formatted education arguments
-\newcommand{\addEducation}[5]{
+\newcommand{\addEducation}[6]{
   \begin{flushleft}
 
     % Table format for degree, school name, location, and dates
@@ -127,7 +127,16 @@
     \end{tabularx} \\
 
     % Further description including focus, minor, and relevant coursework
-    {#5}
+    \vspace{1ex}
+    \begin{itemize}
+      % Itemizes the description of all degree names
+      \item {#5}
+      % Checks if there is a section for more description or relevant coursework
+      \vspace{-1ex}
+      \ifx&#6&\else
+        \item {\textbf{Relevant Coursework: }#6}
+      \fi
+    \end{itemize}
   \end{flushleft}
 }
 
