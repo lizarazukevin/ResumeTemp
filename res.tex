@@ -1,36 +1,15 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% File: res.tx
 %% Author: Kevin Lizarazu-Ampuero
 %% Description: LaTeX document for resume templating
 %% Date: 08/09/2023
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Packages Here
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Classes Here
-
-% Top Information
-
-% Education
-
-% Projects
-
-% Exeprience
-
-% Skills
-
-% Organizations
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Document Setup
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document Setup - Here we load the class file we'll use and alter page size of an empty page
 \documentclass{resume}
-\thispagestyle{empty}
 \usepackage[left=0.4in,top=0.6in,right=0.4in,bottom=0.6in]{geometry} 
+\thispagestyle{empty}
 
-
-% Setters
+% Setting information differing from default macros
 \setName{Kevin Lizarazu-Ampuero}
 \setEmail{lizarazukevin@vt.edu}
 \setPhone{(703)447-7627}
@@ -38,7 +17,8 @@
 \setGitHub{https://github.com/lizarazukevin}
 \setLocation{Arlington, VA}
 
-% Begin Document Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Document Content 
 \begin{document}
 
     % Creates the modified title from set macros
@@ -67,7 +47,8 @@
         MATLAB \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
         SQL \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
         Bash \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        LaTeX \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}}}
+        LaTeX \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}},
+        HTML \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}}
         \addDesc{\textbf{Packages:} NumPy, SciPy, Tkinter, RayLib, Pandas, OpenCV, AIGym, SciKit-Learn, Regex}
         \addDesc{\textbf{Development:} Qt, Docker, Git, Tensorflow, PyTorch, Linux, Anaconda, GDB, Valgrind, Kaggle, Unity, Unreal Engine}
         \addSoftSkill{Trustworthy}{Resilient}{Creative}{Collaborative}{Detail-Oriented}
@@ -89,12 +70,11 @@
         \addProject{Waterway Preservation Through Frogs}{Sierra Club Project}{01/2022 - 05/2022}
     \end{resSection}
 
-    % Begin Organizations/Leadership
+    % Begin organizations section here
     \begin{resSection}{Organizations}
         \addOrg{Clark Scholars}{Member}{06/2019 - Present}
         \addOrg{Society of Hispanic Professional Engineers (SHPE)}{SEC Representative}{05/2022 - 05/2023}
         \addOrgs{Google Latin Student Leadership Summit, ColorStack, Dean's List, VT Global Education Office, Hume UG Research}
     \end{resSection}
-
-                                    
+                                 
 \end{document}
