@@ -10,14 +10,14 @@
 \ProvidesClass{resume}[2023/08/09 Resume Component]
 
 % Load necessary packages
-\LoadClass{article}           % Base article class is loaded
-\usepackage{hyperref}         % Used for integrating links into documents
-\usepackage{graphicx}         % Package for embedding small icons
-\usepackage[parfill]{parskip} % Remove paragraph indentation
-\usepackage{calc}             % Provides support for performing arithmetic calculations within the document
-\usepackage{tikz}             % Useful for drawing various things
-\usepackage{tabularx}         % Can change the width of table sections
-\usepackage{ulem}             % Used for underlining text
+\LoadClass{article}               % Base article class is loaded
+\usepackage[hidelinks]{hyperref}  % Used for integrating links into documents and hides the box
+\usepackage{graphicx}             % Package for embedding small icons
+\usepackage[parfill]{parskip}     % Remove paragraph indentation
+\usepackage{calc}                 % Provides support for performing arithmetic calculations within the document
+\usepackage{tikz}                 % Useful for drawing various things
+\usepackage{tabularx}             % Can change the width of table sections
+\usepackage{ulem}                 % Used for underlining text
 
 % Define class options for customization
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}       % Declares a class option of any unspecified option passing it to article class
@@ -64,10 +64,10 @@
   \begin{center}                    % Center aligns the next section
     \makebox[\textwidth] {          % Creates a box so that it stays centered and doesn't clip
       % Contains information on the user's LinkedIn, phone number, email, GitHub, and location with icons
-      \large \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{LinkedIn} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
+      \large \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{\uline{LinkedIn}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \raisebox{-.4ex}{\includegraphics[height=1em]{icons/phone_small.png}} \@resumephone ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
       \raisebox{-.4ex}{\includegraphics[height=1em]{icons/gmail_small.png}} \href{mailto:\@resumeemail}{\@resumeemail} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
-      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/github_small.png}} \href{\@resumegithub}{GitHub} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/github_small.png}} \href{\@resumegithub}{\uline{GitHub}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \@resumelocation
     }
   \end{center}                      % Ends center-aligning here 
@@ -111,6 +111,8 @@
     \hspace{\swidth - 1.02ex}
     \tikz\draw[black, very thick] (0,0) -- (0.22,0.23);
   \end{flushleft}
+
+  \vspace{-1ex}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -169,7 +171,7 @@
   \begin{flushleft}
     % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
     \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
-      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\bf #2}} & \centering{\it #3} & \textbf{#4}\\
     \end{tabularx} \\
   \end{flushleft}
 }
@@ -184,7 +186,7 @@
   \begin{flushleft}
     % Table format for position, organization/company name, location, and dates (modified scaling to fit positions)
     \begin{tabularx}{\textwidth}{p{7cm} X r}
-      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\it #2} & \textbf{#3}\\
     \end{tabularx} \\
   \end{flushleft}
 }
@@ -199,7 +201,7 @@
   \begin{flushleft}
     \vspace{-1ex}
     \begin{tabularx}{\textwidth}{p{7cm} X r}
-      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\large #2} & \textbf{#3}\\
+      {\scalebox{0.8}[0.8]{\large\bf #1}} & \centering{\it #2} & \textbf{#3}\\
     \end{tabularx} \\
   \end{flushleft}
 }

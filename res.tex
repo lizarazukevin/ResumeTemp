@@ -26,6 +26,7 @@
 
     % Begin education section here
     \begin{resSection}{Education}
+        \vspace{1ex}
         \addEducation{Bachelor of Science}
         {Virginia Tech}
         {Blacksburg, VA}
@@ -33,47 +34,76 @@
         {\textbf{Major} in Computer Engineering, \textbf{Minor} in Organizational Leadership}
         {Machine Learning, Software Systems, Computer Systems, Data Structures \& Algorithms, Large Scale Software Design, Statistics, Computer Architecture, Computer Vision, Artificial Intelligence, Computer Networking}
 
-        \addEducation{Indpendent Online Courses}{}{}{}
-        {Data Analytics Certificate - Google, Web Development - CodePath, Drive Innovation in Your Organization - LinkedIn}{}
+        % \addEducation{Indpendent Online Courses}{}{}{}
+        % {Data Analytics Certificate - Google, Web Development - CodePath, Drive Innovation in Your Organization - LinkedIn}{}
     \end{resSection}
 
-    % Begin skills section here
+    % Begin skills section here with proficiency bars
+    % \begin{resSection}{Skills}
+    %     \addDesc{\textbf{Languages:} Python \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}}, 
+    %     C \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
+    %     C++ \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
+    %     C\# \hspace{-.3ex}{\includegraphics[height=1em]{icons/halfp.png}}, 
+    %     Java \hspace{-.3ex}{\includegraphics[height=1em]{icons/halfp.png}}, 
+    %     MATLAB \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
+    %     SQL \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
+    %     Bash \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
+    %     LaTeX \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}},
+    %     HTML \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}}
+    %     \addDesc{\textbf{Packages:} NumPy, SciPy, Tkinter, RayLib, Pandas, OpenCV, AIGym, SciKit-Learn, RegEx}
+    %     \addDesc{\textbf{Development:} Qt, Docker, Git, Tensorflow, PyTorch, Linux, Anaconda, GDB, Valgrind, Kaggle, Unity, Unreal Engine}
+    %     \addSoftSkill{Trustworthy}{Resilient}{Creative}{Collaborative}{Detail-Oriented}
+    % \end{resSection}
+
+    % Begin skills section here without proficiency bars
     \begin{resSection}{Skills}
-        \addDesc{\textbf{Languages:} Python \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}}, 
-        C \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        C++ \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        C\# \hspace{-.3ex}{\includegraphics[height=1em]{icons/halfp.png}}, 
-        Java \hspace{-.3ex}{\includegraphics[height=1em]{icons/halfp.png}}, 
-        MATLAB \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        SQL \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        Bash \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}, 
-        LaTeX \hspace{-.3ex}{\includegraphics[height=1em]{icons/fullp.png}},
-        HTML \hspace{-.3ex}{\includegraphics[height=1em]{icons/threep.png}}}
-        \addDesc{\textbf{Packages:} NumPy, SciPy, Tkinter, RayLib, Pandas, OpenCV, AIGym, SciKit-Learn, Regex}
+        \vspace{1ex}
+        \addDesc{\textbf{Languages:} Python, C, C++, C\#, Java, MATLAB, SQL, Bash, LaTeX,HTML}
+        \addDesc{\textbf{Packages:} NumPy, SciPy, Tkinter, RayLib, Pandas, OpenCV, AIGym, SciKit-Learn, RegEx}
         \addDesc{\textbf{Development:} Qt, Docker, Git, Tensorflow, PyTorch, Linux, Anaconda, GDB, Valgrind, Kaggle, Unity, Unreal Engine}
-        \addSoftSkill{Trustworthy}{Resilient}{Creative}{Collaborative}{Detail-Oriented}
+        % \addSoftSkill{Trustworthy}{Resilient}{Creative}{Collaborative}{Detail-Oriented}
     \end{resSection}
 
     % Begin experience section here
     \begin{resSection}{Experience}
-        \addExperience{Software Engineer, Intern}{MITRE}{McLean, VA}{05/2022 - 08/2022}
         \addExperience{MITRE Workforce Development Program}{Virginia Tech}{Blacksburg, VA}{08/2021 - 05/2023}
+        \addDesc{Led research on multi-agent reinforcement learning systems for maritime remote sensing applications using Python}
+        \addDesc{Optimized training times by reducing processing by 20\% via CUDA parallel processing and enhanced reward functions}
+        \addDesc{Analyzed training data using TensorFlow, Numpy, and Gym within the Ubuntu environment tracking reward metrics}
+        \addDesc{Collaborated with cross-functional teams to utilize machine learning, artificial intelligence, and Unreal Engine to design and deliver 2D and 3D simulation testbeds showcased at the 2023 SciTech Forum}
+
+        \addExperience{Software Engineer, Intern}{MITRE}{McLean, VA}{05/2022 - 08/2022}
+        \addDesc{Played a pivotal role in developing a gold standard for red teaming AI systems, finding and mitigating vulnerabilities}
+        \addDesc{Directed and coordinated a team of interns, orchestrating the creation and validation of PyTorch object detectors autonomously through a combination of Python, Bash, Cloud Computing, and injection of adversarial patches in our tests}
+        \addDesc{Improved performance of detections by 18\% using the MMDetection framework trained on 330k COCO images}
+        \addDesc{Drove the creation of synthetic data using Unreal Engine with JSON manipulation increasing training and test fidelity}
+        \addDesc{Successfully applied Python's Adversarial Robustness Toolbox (ART) to lower detections by 31\% in the synthetic world}
+
         \addExperience{RockSat-X Sensors Lead}{Virginia Tech}{Blacksburg, VA}{10/2020 - 08/2022}
+        \addDesc{Developed a robust event loop in C to manage sensor data stored in binary and facilitate I2C and SPI with STM32}
+        \addDesc{Converted functional C++ libraries into C, making it compatible with the Raspberry Pi Zero's limited resources}
+        \addDesc{Spearheaded the Tetra star tracker algorithm to determine the payload's position in space via star triangulation in O(1)}
     \end{resSection}
 
     % Begin projects section here
     \begin{resSection}{Projects}
         \addProject{Augmented Reality Transit}{GDMS Senior Design Project}{08/2022 - 05/2023}
+        \addDesc{Unity-based AR app that visualizes 3D paths from Google Maps API and uses YOLOv5 for hazard detection on HoloLens}
+
         \addProject{Fake News Detection}{Machine Learning Project}{01/2023 - 05/2023}
+        \addDesc{Trained Naive Bayes [57\%], Support Vector Machine [87\%], and ChatGPT models on a 45k article dataset (real and fake) from Kaggle, prepared using a bag-of-words approach with a 90/10 split on Python and Pandas dataframe}
+
         \addProject{DermaCheckAI}{Large Scale Software Design Project}{08/2022 - 01/2023}
-        \addProject{MITRE Organizational Analysis}{Organization Leadership Capstone}{01/2023 - 05/2023}
-        \addProject{Waterway Preservation Through Frogs}{Sierra Club Project}{01/2022 - 05/2022}
+        % \addDesc{YOLOv5 object detection model trained on 12k benign [92\%] and malignant[98\%] images contained within a Qt application following C++ design patterns, SQL for data managment, and Python for REST API calls to output quick result}
+        \addDesc{Trained a YOLOv5 model on 12k images of benign [92\% accurate] and malignant [98\% accurate] samples to give diagnosis}
+        \addDesc{Applied C++ design patterns, Python for REST API calls, and SQL for customer data storage all in agile schedule}
     \end{resSection}
 
     % Begin organizations section here
     \begin{resSection}{Organizations}
-        \addOrg{Clark Scholars}{Member}{06/2019 - Present}
-        \addOrg{Society of Hispanic Professional Engineers (SHPE)}{SEC Representative}{05/2022 - 05/2023}
+        \vspace{1ex}
+        \addOrg{Society of Hispanic Professional Engineers}{SEC Representative}{05/2022 - 05/2023}
+        \addOrg{A. James Clark Scholars Program}{Exclusive Cohort Member}{06/2019 - 05/2023}
         \addOrgs{Google Latin Student Leadership Summit, ColorStack, Dean's List, VT Global Education Office, Hume UG Research}
     \end{resSection}
                                  
