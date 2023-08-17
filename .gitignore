@@ -3,5 +3,4 @@ res.fdb_latexmk
 res.fls
 res.log
 res.out
-res.pdf
 res.synctex.gz
