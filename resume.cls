@@ -18,6 +18,8 @@
 \usepackage{tikz}                 % Useful for drawing various things
 \usepackage{tabularx}             % Can change the width of table sections
 \usepackage{ulem}                 % Used for underlining text
+\usepackage{xstring}              % For using the substring
+\usepackage{stringstrings}
 
 % Define class options for customization
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}       % Declares a class option of any unspecified option passing it to article class
@@ -40,6 +42,7 @@
 \newcommand{\resumelinkedin}[1]{\def\@resumelinkedin{#1}}
 \newcommand{\resumegithub}[1]{\def\@resumegithub{#1}}
 \newcommand{\resumelocation}[1]{\def\@resumelocation{#1}}
+\newcommand{\resumesite}[1]{\def\@resumesite{#1}}
 
 % Default values if not changed using commands made to set internal macros
 \resumename{John Doe}
@@ -48,6 +51,7 @@
 \resumelinkedin{https://www.linkedin.com/in/johndoe}
 \resumegithub{https://github.com/johndoe}
 \resumelocation{Denver, CO}
+\resumesite{https://wwww.doejohn.com}
 
 % Setter methods to change default information to specified
 \newcommand{\setName}[1]{\resumename{#1}}
@@ -56,6 +60,7 @@
 \newcommand{\setLinkedIn}[1]{\resumelinkedin{#1}}
 \newcommand{\setGitHub}[1]{\resumegithub{#1}}
 \newcommand{\setLocation}[1]{\resumelocation{#1}}
+\newcommand{\setSite}[1]{\resumesite{#1}}
 
 % Creates a new definition for how to make a title
 \renewcommand{\maketitle}{
@@ -64,8 +69,9 @@
   \begin{center}                    % Center aligns the next section
     \makebox[\textwidth] {          % Creates a box so that it stays centered and doesn't clip
       % Contains information on the user's LinkedIn, phone number, email, GitHub, and location with icons
-      \large \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{\uline{LinkedIn}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/linkedin_small.png}} \href{\@resumelinkedin}{\uline{LinkedIn}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \raisebox{-.4ex}{\includegraphics[height=1em]{icons/phone_small.png}} \@resumephone ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
+      \raisebox{-.4ex}{\includegraphics[height=1em]{icons/web_small.png}} \href{\@resumesite}{\uline{lizarazukevin.dev}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \raisebox{-.4ex}{\includegraphics[height=1em]{icons/gmail_small.png}} \href{mailto:\@resumeemail}{\@resumeemail} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~ 
       \raisebox{-.4ex}{\includegraphics[height=1em]{icons/github_small.png}} \href{\@resumegithub}{\uline{GitHub}} ~\raisebox{-.4ex}{\includegraphics[height=1em]{icons/divider.png}}~
       \@resumelocation
