@@ -130,7 +130,7 @@
 
     % Table format for degree, school name, location, and dates
     \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
-      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \centering{#3} & \textbf{#4}\\
+      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \it\centering{#3} & \textbf{#4}\\
     \end{tabularx} \\
 
     % Further description including focus, minor, and relevant coursework
