@@ -125,23 +125,33 @@
 %% Education Section - Commands and possible macros used in printing the education info
 
 % Creates a new entry with formatted education arguments
-\newcommand{\addEducation}[6]{
+\newcommand{\addEducation}[8]{
   \begin{flushleft}
 
     % Table format for degree, school name, location, and dates
-    \begin{tabularx}{\textwidth}{p{7cm} X p{2.6cm} r}
-      {\scalebox{1.2}[1.1]{\large\bf #1}} & \centering\uline{\scalebox{1}[1]{\large\bf #2}} & \it\centering{#3} & \textbf{#4}\\
-    \end{tabularx} \\
+    \scalebox{1.2}[1.1]{\large\bf #1}
 
-    % Further description including focus, minor, and relevant coursework
+
+    % Two educations: degree, location, dates
+    \begin{tabularx}{\textwidth}{p{10cm} X r}
+      {#2} & {\hspace{2.9cm}\centering\textit{#3}} & {\centering\textbf{#4}} \\
+    \end{tabularx}
+    \vspace{0.1ex}
+    \begin{tabularx}{\textwidth}{p{10cm} X r}
+      {#5} & {\hspace{2.7cm}\centering\textit{#6}} & {\centering\textbf{#7}} \\
+    \end{tabularx}
+    
+
     \vspace{1ex}
     \begin{itemize}
       % Itemizes the description of all degree names
-      \item {#5}
+      % \item {#5}
+      % \vspace{-1ex}
+      % \item {#6}
       % Checks if there is a section for more description or relevant coursework
       \vspace{-1ex}
       \ifx&#6&\else
-        \item {\textbf{Relevant Coursework: }#6}
+        \item {\textbf{Relevant Coursework: }#8}
       \fi
     \end{itemize}
   \end{flushleft}
