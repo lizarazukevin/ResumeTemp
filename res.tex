@@ -28,13 +28,14 @@
     % Begin education section here
     \begin{resSection}{Education} \vspace{1ex}
         \addEducation{Virginia Tech}
-        {M.E. Computer Science}
+        {\textbf{M.E.} Computer Science}
+        {\textbf{GPA:} 3.80/4.0}
         {Arlington, VA}
         {01/2023 - 05/2025}
-        {B.S. Computer Engineering, Organizational Leadership Minor}
+        {\textbf{B.S.} \space Computer Engineering}
+        {\textbf{GPA:} 3.43/4.0}
         {Blacksburg, VA}
         {07/2019 - 05/2023}
-        {Machine Learning, Software Systems, Computer Systems, Data Structures \& Algorithms, Large Scale Software Design, Statistics, Computer Architecture, Computer Vision, Artificial Intelligence, Computer Networking}
 
         % \addEducation{Indpendent Online Courses}{}{}{}
         % {Data Analytics Certificate - Google, Web Development - CodePath, Drive Innovation in Your Organization - LinkedIn}{}
@@ -59,46 +60,42 @@
 
     % Begin skills section here without proficiency bars
     \begin{resSection}{Skills} \vspace{1ex}
-        \addDesc{\textbf{Languages:} Python, C, C++, C\#, Java, SQL, Bash, R, LaTeX, HTML, CSS, JS}
-        \addDesc{\textbf{Packages:} NumPy, SciPy, Matplotlib, Tkinter, Pandas, OpenCV, RegEx, TensorFlow, PyTorch, Celery}
-        \addDesc{\textbf{Development:} Qt, Docker, Git, Anaconda, REST API, Django, MongoDB, Unity, PostgreSQL, GCP, AWS}
+        \addDesc{\textbf{Languages:} Go, Python, Kotlin, Java, C/C++, SQL, TypeScript, Bash, LaTeX}
+        \addDesc{\textbf{Cloud \& DevOps:} AWS (Lambda, DynamoDB, CDK, CloudWatch, OpenSearch), Docker, Git, CI/CD, Linux}
+        \addDesc{\textbf{Frameworks \& Tools:} Django, SpringBoot, Cobra CLI, Celery, PostgreSQL, MongoDB, NumPy, Pandas, TensorFlow, Cloudscape, TanStack, Postman, Guice}
         % \addSoftSkill{Trustworthy}{Resilient}{Creative}{Collaborative}{Detail-Oriented}
     \end{resSection}
 
     % Begin experience section here
     \begin{resSection}{Experience}
-        \addExperience{Software Engineering, Intern}{Rubrik}{Palo Alto, CA}{05/2024 - 08/2024}
-        \addDesc{Deployed productivity feature using a consumer/subscriber model with Celery to efficiently queue tasks asynchronously.}
-        \addDesc{Integrated Google Calendar API to automate and manage CI/CD scheduling, improving visibility and coordination.}
-        \addDesc{Collaborated with managers and developers to gather feedback, resulting in enhanced productivity and satisfaction.}
+        \addExperience{Software Engineer}{AWS}{Arlington, VA}{10/2024 - Present}
+        \addDesc{Contributed to builder productivity initiatives through AWS CDK microservices and IAM-driven tooling.}
+        \addDesc{Designed a Lambda-based ECR Gallery import service that scaled internal repository access from 20 to 1,000$+$ public repositories, handling 8.4M$+$ daily pulls from pipeline events and builders.}
+        \addDesc{Built a CloudWatch metrics system for containerized workspace services, providing launch pattern visibility across 2,000$+$ workspace launches from 471 alpha testers.}
+        \addDesc{Maintained on-call duties for 9$+$ services, ensuring CI/CD pipeline reliability and supporting tool vendors, 162k$+$ cloud desktops, and alpha testing initiatives.}
+
+        \addExperience{Software Engineer, Intern}{Rubrik}{Palo Alto, CA}{05/2024 - 08/2024}
+        \addDesc{Orchestrated a feature to automate CI/CD scheduling using Celery's pub/sub model for async task processing, enabling release managers to coordinate deployments across 10+ engineering teams and eliminate scheduling conflicts.}
+        \addDesc{Integrated Google Calendar API with Django backend to provide a single source of truth for all release timelines, improving visibility and self-service, saving hours of developer time.}
         \addDesc{Gained in-depth knowledge of CI/CD workflows and automation strategies within a Django-Python environment.}
 
-
         \addExperience{Tech Fellow, Web Development}{Codepath}{Arlington, VA}{01/2024 - 05/2024}
-        \addDesc{Mentored 20 students, offering technical guidance and career advice on collaboration, initiative, and velocity.}
-        \addDesc{Developed and deployed a full-stack movie recommendation site using React, Django, and PostgreSQL.}
+        \addDesc{Mentored 20 students, offering technical guidance and career advice on team collaboration, initiative, and velocity.}
+        \addDesc{Built a movie recommendation site using React, Django, and PostgreSQL, implementing JWT auth and RESTful APIs.}
 
         \addExperience{AI and Security Perception Intern}{MITRE}{McLean, VA}{08/2021 - 05/2023}
-        \addDesc{Led research on multi-agent reinforcement learning (MARL) systems, achieving a 20\% reduction in training times through CUDA optimization and enhancing model explainability with Tensorboard visualization.}
         \addDesc{Developed and refined AI red teaming methodologies, identifying and mitigating vulnerabilities in machine learning models, with an 18\% improvement in detection performance using the MMDetection framework.}
         \addDesc{Engineered synthetic datasets via Unreal Engine and JSON manipulation, expanding test data by 80\% and applying adversarial robustness techniques to decrease detection rates by 31\% in synthetic environments.}        
-
-        \addExperience{RockSat-X, Sensors Lead}{Virginia Tech}{Blacksburg, VA}{10/2020 - 08/2022}
-        \addDesc{Developed C-based event loops and algorithms for sensor data management in space.}
-        \addDesc{Implemented complex star triangulation algorithms using an STM32 and Raspberry Pi to guide orientation.}
     \end{resSection}
 
     % Begin projects section here
     \begin{resSection}{Projects}
-        \addProject{AI Flappy Bird}{}{01/2024 - 05/2024}
-        \addDesc{Trained a Flappy Bird agent using RL algorithms including Q-Learning, SARSA, and DQN achieving 10,000+ score}
+    \addProject{Quri - Personal Finance Platform}{}{10/2025 - Present}
+    \addDesc{Developing full-stack application using Kotlin/Spring Boot backend with React frontend and NoSQL database}
+    \addDesc{Implementing ETL pipelines for time-series forecasting of user cash flow and OpenSearch for exporatory data analysis}
 
         \addProject{Augmented Reality Transit}{}{08/2022 - 05/2023}
         \addDesc{Unity-based AR app that visualizes 3D paths from Google Maps API and uses YOLOv5 for hazard detection on HoloLens}
-
-        \addProject{DermaCheckAI}{}{08/2022 - 01/2023}
-        % \addDesc{YOLOv5 object detection model trained on 12k benign [92\%] and malignant[98\%] images contained within a Qt application following C++ design patterns, SQL for data managment, and Python for REST API calls to output quick result}
-        \addDesc{Trained a YOLOv5 model on 12k images of benign [92\% accurate] and malignant [98\% accurate] samples to give diagnosis}
     \end{resSection}
 
     % Begin organizations section here

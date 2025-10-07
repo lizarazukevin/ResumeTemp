@@ -125,35 +125,29 @@
 %% Education Section - Commands and possible macros used in printing the education info
 
 % Creates a new entry with formatted education arguments
-\newcommand{\addEducation}[8]{
+\newcommand{\addEducation}[9]{
   \begin{flushleft}
 
     % Table format for degree, school name, location, and dates
     \scalebox{1.2}[1.1]{\large\bf #1}
 
-
     % Two educations: degree, location, dates
-    \begin{tabularx}{\textwidth}{p{10cm} X r}
-      {#2} & {\hspace{2.9cm}\centering\textit{#3}} & {\centering\textbf{#4}} \\
+    \begin{tabularx}{\textwidth}{p{6cm} c X r}
+      {#2} & {\textit{#3}} & {\hspace{2.9cm}\centering\textit{#4}} & {\centering\textbf{#5}} \\
     \end{tabularx}
     \vspace{0.1ex}
-    \begin{tabularx}{\textwidth}{p{10cm} X r}
-      {#5} & {\hspace{2.7cm}\centering\textit{#6}} & {\centering\textbf{#7}} \\
+    \begin{tabularx}{\textwidth}{p{6cm} c X r}
+      {#6} & {\textit{#7}} & {\hspace{2.7cm}\centering\textit{#8}} & {\centering\textbf{#9}} \\
     \end{tabularx}
     
-
-    \vspace{1ex}
-    \begin{itemize}
-      % Itemizes the description of all degree names
-      % \item {#5}
-      % \vspace{-1ex}
-      % \item {#6}
-      % Checks if there is a section for more description or relevant coursework
-      \vspace{-1ex}
-      \ifx&#6&\else
-        \item {\textbf{Relevant Coursework: }#8}
-      \fi
-    \end{itemize}
+    % Remove the entire itemize environment since we're not using coursework
+    % \vspace{1ex}
+    % \begin{itemize}
+    %   \vspace{-1ex}
+    %   % \ifx&#8&\else
+    %   %   \item {\textbf{Relevant Coursework: }#8}
+    %   % \fi
+    % \end{itemize}
   \end{flushleft}
 }
 
