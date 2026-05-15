@@ -10,6 +10,10 @@ If you are planning to modify these files on your local computer using VSCode, y
 - [MikTex](https://miktex.org/download) latest x64 version
 - [Strawberry Perl](https://strawberryperl.com/) latest 64-bit version
 
+On MacBook the process is different, follow either steps:
+- Install MikTex for Mac -> allow installation on the fly when running as admin user -> run `initexmf`
+- Or install minimal dependencies through Brew by following this [tutorial](https://www.youtube.com/watch?v=dX5ItkcAsEo)
+
 The VSCode extension might be bothered by another pdf viewer if you have one already so make sure to only have that one enabled when compiling LaTeX code.
 
 If you have trouble, refer to the video: [Tutorial Installation Video](https://www.youtube.com/watch?v=4lyHIQl4VM8)
